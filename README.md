@@ -25,7 +25,7 @@ struct ContentView: View {
   
   var body: some View {
     Text("Hello!")
-      .foregroundColor(env.value(of: "ForegroundColorKey", as: Color.self))
+      .foregroundColor(env.value(of: "ForegroundColorKey"))
   }
 }
 ```
@@ -75,7 +75,7 @@ struct InnerView: View {
 
 extension EnvironmentValues {
   var buttonBorderShape: ButtonBorderShape? {
-    get { value(of: "ButtonBorderShapeKey", as: ButtonBorderShape.self) }
+    get { value(of: "ButtonBorderShapeKey") }
   }
 }
 
